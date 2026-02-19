@@ -40,5 +40,11 @@ void setup() {
  */
 void loop() {
     sensorState = digitalRead(IR_PIN);
+    if (sensorState == LOW) {
+        Serial.println("Obstacle Detected");
+    } else {
+        Serial.println("No Obstacle");
+    }
 
+    delay(300);
 }
